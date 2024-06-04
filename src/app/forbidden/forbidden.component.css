@@ -1,0 +1,10 @@
+:host {  
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  

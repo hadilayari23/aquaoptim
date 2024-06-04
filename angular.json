@@ -27,7 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [  "node_modules/apexcharts/dist/apexcharts.min.js"]
           },
           "configurations": {
             "production": {
@@ -89,10 +89,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [  "node_modules/apexcharts/dist/apexcharts.min.js",
+            "./node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"
+          ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "870c47c2-95bf-4c3c-b7c9-0195ca394249"
   }
 }

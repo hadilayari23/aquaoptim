@@ -1,0 +1,29 @@
+<div class="flex justify-center items-center">
+    <img [src]="imageURL" class="mt-10 mr-56" alt="Logo" />
+    <div class="bg-white grid justify-items-end">
+        <form [formGroup]="userform" class="shadow-md p-5 min-w-80 min-h-80 flex flex-col items-center m-10 mt-32" (ngSubmit)="onSubmit()">
+            <div class="w-full mb-5">
+                <p class="text-center text-lg font-light text-teal-600" style="font-family: Sevillana; font-size: 34px">Sign In</p>
+            </div>
+
+            <div class="pb-5 w-full">
+                <label class="pr-2">Email:</label>
+                <input type="email" formControlName="email" name="email" class="border-2 border-color-inherit p-1 rounded-md w-full" placeholder="user@example.com" required>
+                <div *ngIf="userform.get('email')?.invalid && (userform.get('email')?.dirty || userform.get('email')?.touched)" class="text-red-500">Email is required</div>
+            </div>
+            
+            <div class="pb-5 w-full">
+                <label class="pr-2">Password:</label>
+                <input type="password" formControlName="pass" name="pass" class="border-2 border-color-inherit p-1 rounded-md w-full" placeholder="********" required>
+                <div *ngIf="userform.get('pass')?.invalid && (userform.get('pass')?.dirty || userform.get('pass')?.touched)" class="text-red-500">Password is required</div>
+            </div>
+
+            <div>
+                <button type="submit" [disabled]="userform.invalid" class="rounded-xl bg-gradient-to-r from-emerald-400 to-teal-600 p-2 text-white" style="font-size: 14px">Sign In</button>
+            </div>
+          
+
+            
+        </form>
+    </div>
+</div>
